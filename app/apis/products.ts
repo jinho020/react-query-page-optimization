@@ -11,7 +11,7 @@ export const getProducts = () => ({
 });
 
 export const getProductById = (id: number) => ({
-  queryKey: ['getProductsById', id],
+  queryKey: ['getProductById', id],
   queryFn: async () => {
     const response = await fetch(`${API_URL}/products/${id}`);
     const data: Product = await response.json();
