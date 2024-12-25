@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
-import { useState } from 'react';
 import { getProductById } from '~/apis/products';
+import { useBoolean } from '~/hooks/use-boolean';
 
 function Modal({ onClose }: { onClose: () => void }) {
   const { data, isLoading } = useQuery(getProductById(1));
@@ -32,11 +32,8 @@ function Modal({ onClose }: { onClose: () => void }) {
 
 export default function HomePage() {
   const { data, isLoading } = useQuery(getProductById(1));
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => setIsModalOpen(true);
-
-  const closeModal = () => setIsModalOpen(false);
+  const { value: isModalOpen, setTrue: openModal, setFalse: closeModal } = useBoolean();
 
   if (isLoading) {
     return <div>Loading...</div>;

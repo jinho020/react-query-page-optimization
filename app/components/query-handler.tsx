@@ -9,7 +9,7 @@ export function QueryHandler() {
 
   // Invalidate all queries when the pathname changes
   useEffect(() => {
-    if (lastPathname.current != location.pathname) {
+    if (lastPathname.current !== location.pathname) {
       queryClient.invalidateQueries();
       lastPathname.current = location.pathname;
     }
