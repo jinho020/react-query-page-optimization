@@ -12,7 +12,7 @@ function Header() {
   ];
 
   return (
-    <header className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 text-white p-4 flex items-center justify-between">
+    <header className="bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 text-white p-4 flex items-center justify-between">
       <nav className="flex items-end gap-4">
         <h1 className="text-2xl leading-none">Header</h1>
         <ul className="flex space-x-4 items-center">
@@ -40,7 +40,7 @@ export default function Layout({ children }: PropsWithChildren) {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow p-4">{children}</main>
-      <footer className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 text-white p-4">
+      <footer className="bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 text-white p-4">
         <h1 className="text-xl">Footer</h1>
       </footer>
     </div>

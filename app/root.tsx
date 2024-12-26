@@ -6,7 +6,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { useState } from 'react';
 import { QueryHandler } from './components/query-handler';
 
-export const links: Route.LinksFunction = () => [{ rel: 'stylesheet', href: stylesheet }];
+export const links: Route.LinksFunction = () => [{ rel: 'stylesheet', href: stylesheet, as: 'style' }];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
